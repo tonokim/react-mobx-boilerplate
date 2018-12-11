@@ -7,6 +7,8 @@ import { Provider } from 'mobx-react'
 import { AppContainer } from 'react-hot-loader'
 import { rehydrate, hotRehydrate } from 'rfx-core'
 import { isProduction } from "utils"
+import 'normalize.css'
+import './style.less'
 
 import App from "./containers/App";
 import "./stores";

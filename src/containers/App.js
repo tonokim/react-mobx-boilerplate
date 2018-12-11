@@ -16,8 +16,14 @@ export default class  extends Component {
     this.store = this.props.store
   }
 
+  componentDidMount() {
+    // setInterval(()=>{
+    //   this.store.app.onChangeText(this.store.app.text+1)
+    // },3000)
+  }
+
   onClick = () => {
-    this.store.onChange("1233")
+    this.store.app.onChange("123")
   }
 
   render(){
@@ -25,7 +31,7 @@ export default class  extends Component {
     return(
       <div className={style.container}>
         <DevTools />
-        Hello World1!
+        Hello World!
         <span>{text}</span>
         <input type="text" value={text} onChange={this.store.app.onChange} />
         <div>
