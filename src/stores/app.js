@@ -4,7 +4,7 @@ class App {
   constructor(rootStore) {
     this.rootStore = rootStore
   }
-  @observable text = '1234'
+  @observable text = '123'
 
   @action
   onChange = (e) => {

@@ -63,25 +63,6 @@ class App extends Component {
  }
 }
 
-
-
-const Element1 = ({ children }) => <div>Block2 {children}</div>
-
-const Element2 = () => (
-  <div>
-    Block2 
-    <div>12</div>
-  </div>
-)
-
-// const App = () => (
-//   <h1>
-//     Hello, mobx1<br />
-//     {/*<Element1 />
-//     <Element2 /> */}
-//   </h1>
-// )
-
-setConfig({ logLevel: 'debug' })
+// setConfig({ logLevel: 'debug' })
 
 export default hot(module)(App)

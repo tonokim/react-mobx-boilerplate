@@ -4041,7 +4041,7 @@ json-schema@0.2.3:
   version "0.2.3"
   resolved "http://registry.npm.taobao.org/json-schema/download/json-schema-0.2.3.tgz#b480c892e59a2f05954ce727bd3f2a4e882f9e13"
 
-json-stringify-safe@5.0.1, json-stringify-safe@~5.0.1:
+json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved "http://registry.npm.taobao.org/json-stringify-safe/download/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
 
@@ -4263,10 +4263,6 @@ lodash.merge@^4.6.1:
 lodash.restparam@^3.0.0:
   version "3.6.1"
   resolved "http://registry.npm.taobao.org/lodash.restparam/download/lodash.restparam-3.6.1.tgz#936a4e309ef330a7645ed4145986c85ae5b20805"
-
-lodash@4.16.6:
-  version "4.16.6"
-  resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.16.6.tgz#d22c9ac660288f3843e16ba7d2b5d06cca27d777"
 
 lodash@^4.17.11, lodash@^4.3.0:
   version "4.17.11"
@@ -4585,9 +4581,9 @@ mobx-react@^5.4.3:
     hoist-non-react-statics "^3.0.0"
     react-lifecycles-compat "^3.0.2"
 
-mobx@^5.8.0:
-  version "5.8.0"
-  resolved "http://registry.npm.taobao.org/mobx/download/mobx-5.8.0.tgz#cf59eae4baa2fde4387ffb6462b7ccf3b497b03c"
+mobx@4.8.0:
+  version "4.8.0"
+  resolved "http://registry.npm.taobao.org/mobx/download/mobx-4.8.0.tgz#6059feb9e0d3440acca5ae192daad63198b1180f"
 
 morgan@^1.9.1:
   version "1.9.1"
@@ -5902,14 +5898,6 @@ rework@^1.0.1:
     convert-source-map "^0.3.3"
     css "^2.0.0"
 
-rfx-core@^1.6.0:
-  version "1.6.0"
-  resolved "http://registry.npm.taobao.org/rfx-core/download/rfx-core-1.6.0.tgz#8a241994ed6181053f5ff443189699577d0e4aa5"
-  dependencies:
-    json-stringify-safe "5.0.1"
-    lodash "4.16.6"
-    safe-access "0.1.0"
-
 rimraf@^2.2.8, rimraf@^2.5.4, rimraf@^2.6.1, rimraf@^2.6.2:
   version "2.6.2"
   resolved "http://registry.npm.taobao.org/rimraf/download/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
@@ -5944,10 +5932,6 @@ run-queue@^1.0.0, run-queue@^1.0.3:
 rx@^4.1.0:
   version "4.1.0"
   resolved "http://registry.npm.taobao.org/rx/download/rx-4.1.0.tgz#a5f13ff79ef3b740fe30aa803fb09f98805d4782"
-
-safe-access@0.1.0:
-  version "0.1.0"
-  resolved "http://registry.npm.taobao.org/safe-access/download/safe-access-0.1.0.tgz#ce46b1190bd316672e1c7d001cab32970c488955"
 
 safe-buffer@5.1.1:
   version "5.1.1"
