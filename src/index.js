@@ -4,7 +4,6 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'mobx-react'
-// import { rehydrate, hotRehydrate } from 'rfx-core'
 import { isProduction } from "utils"
 import 'normalize.css'
 import './style.less'
