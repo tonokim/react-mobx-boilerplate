@@ -1,7 +1,7 @@
 import { observable, computed, toJS, action } from "mobx"
 
 class App {
-  @observable text = '123'
+  @observable text = '1234'
 
   @action
   onChange = (e) => {

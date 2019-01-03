@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react'
+import { hot, setConfig } from 'react-hot-loader'
 import { inject, observer } from "mobx-react";
 import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom'
 import Loadable from 'react-loadable';
@@ -10,7 +11,7 @@ import style from './style.less'
 @withRouter
 @inject("store")
 @observer
-export default class  extends Component {
+class App extends Component {
   constructor(props){
     super(props)
     this.store = this.props.store
@@ -61,3 +62,26 @@ export default class  extends Component {
     )
  }
 }
+
+
+
+const Element1 = ({ children }) => <div>Block2 {children}</div>
+
+const Element2 = () => (
+  <div>
+    Block2 
+    <div>12</div>
+  </div>
+)
+
+// const App = () => (
+//   <h1>
+//     Hello, mobx1<br />
+//     {/*<Element1 />
+//     <Element2 /> */}
+//   </h1>
+// )
+
+setConfig({ logLevel: 'debug' })
+
+export default hot(module)(App)
