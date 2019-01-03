@@ -1,6 +1,6 @@
 import { observable, computed, toJS, action } from "mobx"
 
-class App {
+class User {
   constructor(rootStore) {
     this.rootStore = rootStore
   }
@@ -18,4 +18,4 @@ class App {
   
 }
 
-export default App
+export default User

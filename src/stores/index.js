@@ -1,6 +1,13 @@
-import { store } from "rfx-core";
-import app from './app';
 
-export default store.setup({
-	app
-});
+import app from './app';
+import user from "./user";
+
+
+class RootStore {
+  constructor() {
+    this.app = new app(this)
+    this.user = new user(this)
+  }
+}
+
+export default RootStore

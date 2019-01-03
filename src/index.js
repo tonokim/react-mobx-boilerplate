@@ -4,20 +4,19 @@ import React from 'react'
 import { render } from 'react-dom'
 import { BrowserRouter as Router } from 'react-router-dom'
 import { Provider } from 'mobx-react'
-import { rehydrate, hotRehydrate } from 'rfx-core'
+// import { rehydrate, hotRehydrate } from 'rfx-core'
 import { isProduction } from "utils"
 import 'normalize.css'
 import './style.less'
 
 import App from "./containers/App";
-import "./stores";
+import RootStore from "./stores";
 
-const store = rehydrate();
 
 const renderApp = Component => {
 	render(
 			<Router>
-				<Provider store={isProduction ? store : hotRehydrate()}>
+				<Provider rootStore={new RootStore()}>
 					<App />
 				</Provider>
 			</Router>,

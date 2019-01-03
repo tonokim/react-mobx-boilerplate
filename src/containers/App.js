@@ -9,12 +9,12 @@ import { Loader } from 'components';
 import style from './style.less'
 
 @withRouter
-@inject("store")
+@inject("rootStore")
 @observer
 class App extends Component {
   constructor(props){
     super(props)
-    this.store = this.props.store
+    this.store = this.props.rootStore
   }
 
   componentDidMount() {
@@ -34,7 +34,7 @@ class App extends Component {
         <DevTools />
         Hello World!
         <span>{text}</span>
-        <input type="text" value={text} onChange={this.store.app.onChange} />
+        <input type="text" value={text}  onChange={this.store.app.onChange}/> 
         <div>
           <Link to={{pathname:'/page1'}}>Page1</Link>
         </div>
