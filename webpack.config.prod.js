@@ -1,6 +1,8 @@
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const autoprefixer = require('autoprefixer')
 
@@ -26,15 +28,15 @@ module.exports = {
     chunkFilename: "[name].[chunkhash:8].js"
   },
   optimization:{
-    minimize: true,
-    // minimizer:{
-    //     new UglifyJsPlugin({
-    //         cache: true,
-    //         parallel: true,
-    //         sourceMap: true // set to true if you want JS source maps
-    //     }),
-    //     new OptimizeCSSAssetsPlugin({})
-    // },
+    // minimize: true,
+    minimizer:[
+      new UglifyJsPlugin({
+          cache: true,
+          parallel: true,
+          sourceMap: true // set to true if you want JS source maps
+      }),
+      new OptimizeCssAssetsPlugin({})
+    ],
     runtimeChunk: {
       name: 'manifest'
     },
@@ -72,7 +74,7 @@ module.exports = {
             loader: "css-loader",
             options: {
               sourceMap: false,
-              minimize: true
+              // minimize: true
             }
           },
           {
@@ -97,7 +99,7 @@ module.exports = {
               importLoaders: 1,
               localIdentName: "[hash:base64:5]",//[name]_[local]_
               sourceMap: false,
-              minimize: true
+              // minimize: true
             }
           },
           {
