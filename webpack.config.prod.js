@@ -11,7 +11,7 @@ module.exports = {
   mode:'production',
   entry: {
     bundle: [
-      "babel-polyfill", 
+      "@babel/polyfill", 
       "./src/index"
     ],
     vendor: [
