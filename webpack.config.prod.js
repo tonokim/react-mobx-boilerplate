@@ -1,7 +1,7 @@
 const webpack = require("webpack")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
+const InlineManifestWebpackPlugin = require('inline-manifest-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin')
 const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -34,9 +34,10 @@ module.exports = {
       new TerserPlugin(),
       new OptimizeCssAssetsPlugin()
     ],
-    runtimeChunk: {
-      name: 'manifest'
-    },
+    // runtimeChunk: {
+    //   name: 'manifest'
+    // },
+    runtimeChunk: 'single',
     splitChunks: {
       cacheGroups: {
         vendor: {
@@ -154,8 +155,15 @@ module.exports = {
     new HtmlWebPackPlugin({
       hash: false,
       template: './src/index.ejs',
+      minify: { 
+        removeAttributeQuotes: true,
+        removeComments: true,
+        collapseWhitespace: true,
+        collapseInlineTagWhitespace: true
+      },
       // filename: "./index.html"
     }),
+    new InlineManifestWebpackPlugin(),
     new MiniCssExtractPlugin({ 
       filename: 'assets/[name].[chunkhash:8].css', 
       // chunkFilename: "[id].css"
