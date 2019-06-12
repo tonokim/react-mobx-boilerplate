@@ -28,10 +28,14 @@ module.exports = {
     filename: "[name].[chunkhash:8].js",
     chunkFilename: "[name].[chunkhash:8].js"
   },
+  // devtool: 'source-map',
   optimization:{
     // minimize: true,
     minimizer:[
-      new TerserPlugin(),
+      new TerserPlugin({
+        // sourceMap: true,
+        // parallel: 8,
+      }),
       new OptimizeCssAssetsPlugin()
     ],
     // runtimeChunk: {
