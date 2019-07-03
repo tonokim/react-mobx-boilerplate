@@ -18,9 +18,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    // setInterval(()=>{
-    //   this.store.app.onChangeText(this.store.app.text+1)
-    // },3000)
+
   }
 
   onClick = () => {
