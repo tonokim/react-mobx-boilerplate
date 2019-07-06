@@ -4,16 +4,10 @@ class App {
   constructor(rootStore) {
     this.rootStore = rootStore
   }
-  @observable text = '123'
-
-  @action
-  onChange = (e) => {
-    this.text = e.target.value;
-  }
+  @observable appName = 'testapp'
   
-  @action
-  onChangeText = (value) => {
-    this.text = value;
+  @action onChange = (name) => {
+    this.appName = name
   }
   
 }

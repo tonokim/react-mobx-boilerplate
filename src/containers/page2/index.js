@@ -1,20 +1,12 @@
 
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
-export default class  extends Component {
-  constructor(props){
-    super(props)
-  }
-
-  componentDidMount() {
-    console.log(2)
-  }
-
-  render(){
-    return(
-      <div>
-        I am page2。
-      </div>
-    )
- }
+export default function Page2(){
+  return (
+    <div>
+      Page2
+      <Link to={{ pathname: '/page1' }}>Go Page1</Link>
+    </div>
+  )
 }

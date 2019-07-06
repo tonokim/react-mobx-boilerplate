@@ -4,16 +4,11 @@ class User {
   constructor(rootStore) {
     this.rootStore = rootStore
   }
-  @observable text = '1234'
-
-  @action
-  onChange = (e) => {
-    this.text = e.target.value;
-  }
+  @observable name = 'sam'
+  @observable age = 18
   
-  @action
-  onChangeText = (value) => {
-    this.text = value;
+  @action onChange = (age) => {
+    this.age = age
   }
   
 }

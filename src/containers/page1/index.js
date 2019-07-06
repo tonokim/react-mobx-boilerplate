@@ -1,20 +1,21 @@
 
 import React, { Component } from 'react'
+import { inject, observer } from "mobx-react"
+import { Link } from 'react-router-dom'
 
+@inject("rootStore")
+@observer
 export default class  extends Component {
   constructor(props){
     super(props)
+    this.store = this.props.rootStore
   }
-
-  componentDidMount() {
-    console.log(1)
-  }
-  
   
   render(){
     return(
-      <div>
-        I am page1。
+      <div> 
+        Page1 
+        <Link to={{ pathname: '/page2' }}>Go Page2</Link>
       </div>
     )
  }
