@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import { hot, setConfig } from 'react-hot-loader'
 import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom'
 import Loadable from 'react-loadable';
-import { Loader } from 'components';
-import style from './style.less'
+import { Loader } from '@/components';
 
 @withRouter
 class App extends Component {
@@ -16,7 +15,14 @@ class App extends Component {
     return(
       <Switch>
         <Route 
-          exact 
+          exact
+          path="/" 
+          component={Loadable({
+            loader: () => import('./page1'),
+            loading: Loader
+          })}
+        />
+        <Route 
           path="/page1" 
           component={Loadable({
             loader: () => import('./page1'),

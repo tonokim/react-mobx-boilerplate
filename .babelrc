@@ -11,6 +11,34 @@
     ["@babel/plugin-syntax-dynamic-import"],
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
     ["@babel/plugin-proposal-class-properties", { "loose": true }],
-    ["@babel/plugin-transform-async-to-generator"]
-  ]
+    ["@babel/plugin-transform-async-to-generator"],
+    [
+      "react-css-modules",
+      {
+        "filetypes": {
+            ".less": {
+                "syntax": "postcss-less"
+            }
+        },
+        "generateScopedName": "[path]___[name]__[local]___[hash:base64:5]"
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "react-css-modules",
+          {
+            "filetypes": {
+                ".less": {
+                    "syntax": "postcss-less"
+                }
+            },
+            "generateScopedName": "[hash:base64:5]"
+          }
+        ]
+      ]
+    }
+  }
 }

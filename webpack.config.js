@@ -24,8 +24,8 @@ module.exports = {
     historyApiFallback: true,
     disableHostCheck: true,
     proxy: {
-      '/v1': {
-        target: 'http://localhost:1337',
+      '/mockapi': {
+        target: 'http://0.0.0.0:8080',
         secure: false
       }
     }
@@ -54,7 +54,7 @@ module.exports = {
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
+              localIdentName: "[path]___[name]__[local]___[hash:base64:5]",
               sourceMap: true,
             }
           },
@@ -119,10 +119,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@less': `${__dirname}/src/themes`,
-      components: `${__dirname}/src/components`,
-      utils: `${__dirname}/src/utils`,
-      config: `${__dirname}/src/utils/config`,
+      '@': `${__dirname}/src`,
+      '@less': `${__dirname}/src/themes`
     }
   }
 };

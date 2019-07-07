@@ -30,7 +30,6 @@ module.exports = {
   },
   // devtool: 'source-map',
   optimization:{
-    // minimize: true,
     minimizer:[
       new TerserPlugin({
         // sourceMap: true,
@@ -99,9 +98,8 @@ module.exports = {
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[hash:base64:5]",//[name]_[local]_
+              localIdentName: "[hash:base64:5]",
               sourceMap: false,
-              // minimize: true
             }
           },
           {
@@ -183,10 +181,8 @@ module.exports = {
   ],
   resolve: {
     alias: {
-      '@less': `${__dirname}/src/themes`,
-      components: `${__dirname}/src/components`,
-      utils: `${__dirname}/src/utils`,
-      config: `${__dirname}/src/utils/config`,
+      '@': `${__dirname}/src`,
+      '@less': `${__dirname}/src/themes`
     }
   }
 };
