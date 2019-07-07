@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { hot, setConfig } from 'react-hot-loader'
+
 import { Switch, Route, Link, Redirect, withRouter } from 'react-router-dom'
 import Loadable from 'react-loadable';
 import { Loader } from '@/components';
@@ -43,4 +43,4 @@ class App extends Component {
 
 // setConfig({ logLevel: 'debug' })
 
-export default hot(module)(App)
+export default App

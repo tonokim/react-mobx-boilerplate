@@ -10,4 +10,6 @@ class RootStore {
   }
 }
 
-export default RootStore
+const rootStore = new RootStore()
+
+export default rootStore
