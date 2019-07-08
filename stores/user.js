@@ -1,7 +1,7 @@
 import { types, getParent } from 'mobx-state-tree'
 
 export const User = types.model("User", {
-  name: 'test',
+  name: 'test3',
   age: 1,
   lastUpdate: types.Date,
 })

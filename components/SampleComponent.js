@@ -39,18 +39,10 @@ class SampleComponent extends React.Component {
           lastUpdate={this.store.user.lastUpdate}
           light={false}
         />
+        <p>title: {this.props.title}</p>
         <p>Name: {this.props.store.user.name}</p>
         <p>Age: {this.props.store.user.age}</p>
         <button className={style['box']} onClick={this.onClick}>增加</button>
-      </div>
-    )
-    return (
-      <div>
-        <h1>{this.props.title}</h1>
-        <Clock
-          lastUpdate={this.props.store.lastUpdate}
-          light={this.props.store.light}
-        />
         <nav>
           <Link href={this.props.linkTo}>
             <a>Navigate</a>
